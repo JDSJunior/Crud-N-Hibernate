@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="FluentNHibernate 2.0.3.0" Category="Package" Bounds="279.628333333333,55.96,150.803333333333,25.96" Label="FluentNHibernate 2.0.3.0" />
+    <Node Id="Iesi.Collections 4.0.0.4000" Category="Package" Bounds="277.816666666667,167.88,154.426666666667,25.96" Label="Iesi.Collections 4.0.0.4000" />
+    <Node Id="Mono.Security 3.2.3.0" Category="Package" Bounds="116.465,55.96,133.13,25.96" Label="Mono.Security 3.2.3.0" />
+    <Node Id="NHibernate 4.0.0.4000" Category="Package" Bounds="286.268333333333,111.92,137.523333333333,25.96" Label="NHibernate 4.0.0.4000" />
+    <Node Id="Repository" Category="Project" Bounds="144.898333333333,0,76.2633333333334,25.96" Label="Repository" />
+    <Node Id="WinCRUD" Category="Project" Bounds="41.9449999999999,0,72.17,25.96" Label="WinCRUD" />
+  </Nodes>
+  <Links>
+    <Link Source="FluentNHibernate 2.0.3.0" Target="NHibernate 4.0.0.4000" Category="Package Dependency" Bounds="355.029998779297,81.9199981689453,0,21" />
+    <Link Source="NHibernate 4.0.0.4000" Target="Iesi.Collections 4.0.0.4000" Category="Package Dependency" Bounds="355.029998779297,137.880004882813,0,21" />
+    <Link Source="Repository" Target="FluentNHibernate 2.0.3.0" Category="Installed Package" Bounds="220.268661499023,25.0955543518066,86.3072662353516,28.0799713134766" />
+    <Link Source="Repository" Target="Mono.Security 3.2.3.0" Category="Installed Package" Bounds="183.029998779297,25.9599990844727,0,21" />
+    <Link Source="WinCRUD" Target="Mono.Security 3.2.3.0" Category="Installed Package" Bounds="102.384895324707,25.9599990844727,48.347770690918,25.7670631408691" />
+  </Links>
+  <Categories>
+    <Category Id="Installed Package" />
+    <Category Id="Package" />
+    <Category Id="Package Dependency" />
+    <Category Id="Project" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Project" ValueLabel="True">
+      <Condition Expression="HasCategory('Project')" />
+      <Setter Property="Background" Value="Blue" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Package Dependency" ValueLabel="True">
+      <Condition Expression="HasCategory('Package Dependency')" />
+      <Setter Property="Background" Value="Yellow" />
+    </Style>
+  </Styles>
+</DirectedGraph>
